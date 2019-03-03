@@ -30,7 +30,7 @@ class App extends Component {
     }
 
     fetchCurrentCity = async () => {
-        let response = await fetch(`http://ip-api.com/json/`);
+        let response = await fetch(`https://cors-anywhere.herokuapp.com/http://ip-api.com/json/`);
         let cityObj = await response.json();
         if (CITIES.includes(cityObj.city)) {
             this.setState({
