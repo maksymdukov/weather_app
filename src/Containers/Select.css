@@ -1,0 +1,207 @@
+.CitiesList::-webkit-scrollbar {
+    width: 8px;
+}
+
+.CitiesList::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+}
+
+.CitiesList::-webkit-scrollbar-thumb {
+    background: darkblue;
+    border-radius: 8px;
+}
+
+.CitiesList::-webkit-scrollbar-thumb:hover {
+    background: mediumblue;
+}
+
+.select {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    min-width: 300px;
+    /*width: 100%;*/
+    max-height: 80%;
+    align-self: center;
+    box-shadow: 10px 11px 61px -12px rgba(0, 0, 0, 0.75);
+    border-radius: 20px;
+}
+
+.select button {
+    padding: 0;
+    margin: 0;
+    /*width: 100%;*/
+}
+
+.select button {
+    font-size: 30px;
+    background-color: cornflowerblue;
+    color: white;
+    border: 1px solid white;
+    padding: 5px;
+    transition: outline .5s, color .5s, background-color .5s;
+    border-radius: 20px;
+}
+
+.select button span {
+    width: 20px;
+}
+
+.select button:focus {
+    /*outline: 3px solid white;*/
+    /*outline-offset: -3px;*/
+    outline: none;
+    background-color: #005ce6;
+    /*color: red;*/
+}
+
+.select button:hover {
+    /*outline: 3px solid white;*/
+    /*outline-offset: -3px;*/
+    /*color: red;*/
+    background-color: #005ce6;
+}
+
+.select > ul {
+
+    z-index: 12;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    width: 100%;
+    max-height: 450px;
+    overflow: auto;
+
+}
+
+.select ul li {
+    margin-top: 3px;
+    width: 100%;
+}
+
+.select ul li .selectButton {
+    width: 100%;
+    border: none;
+    position: relative;
+}
+
+.select ul li .selectDelete {
+    line-height: 25px;
+    font-size: 25px;
+    text-align: center;
+    display: inline-block;
+    position: absolute;
+    right: 10px;
+    border: none;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    background-color: #e83e8c;
+    color: white;
+    top: 10px;
+}
+
+.select .searchSection > ul {
+
+    z-index: 12;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    width: 100%;
+}
+
+.SearchList {
+    position: relative;
+    /*width: 100%;*/
+    max-height: 200px;
+    overflow: auto;
+}
+
+.select ul .cityInput {
+    width: 100%;
+    border: none;
+    position: relative;
+}
+
+.select ul .cityInput input {
+    border: none;
+    border-radius: 15px;
+    height: 40px;
+    width: 100%;
+    font-size: 25px;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
+}
+
+.select ul .cityInput input:focus {
+    outline: none;
+}
+
+.cityInput .searchIcon {
+    position: absolute;
+    right: 10px;
+    top: calc(50% - 12px);
+    font-size: 25px;
+    color: grey;
+    transform: none;
+    transition: color .5s, transform .5s;
+}
+
+.cityInput > input:focus + .searchIcon {
+    color: blue;
+    transform: rotate(360deg);
+}
+
+.select > button {
+    position: relative;
+    border: none;
+    width: 100%;
+}
+
+.select__arrow {
+    position: absolute;
+    top: calc(50% - 15px);
+    right: 15px;
+}
+
+.select__location {
+    margin-left: 10px;
+}
+
+.select__arrow-rotate {
+    transition: transform .5s;
+}
+
+.arrow-active {
+    transform: rotate(180deg);
+}
+
+.animatedListOut {
+    animation: popOut .3s linear forwards;
+}
+
+.animatedListIn {
+    animation: popIn .2s linear forwards;
+}
+
+@keyframes popOut {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 100%;
+    }
+}
+
+@keyframes popIn {
+    0% {
+        opacity: 100%;
+    }
+    100% {
+        opacity: 0;
+    }
+}

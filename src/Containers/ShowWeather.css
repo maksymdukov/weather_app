@@ -1,0 +1,120 @@
+.ShowWeather {
+    margin-top: 20px;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    /*opacity: 1;*/
+    /*align-content: center;*/
+}
+
+.ShowWeather__title {
+    font-size: 28px;
+    color: black;
+    text-align: center;
+}
+
+.ShowWeather__item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+
+.ShowWeather__item .ShowWeather__temp {
+    font-size: 25px;
+    color: #e83e8c;
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+.ShowWeather__C {
+    margin-left: 5px;
+    font-size: 30px;
+    font-weight: bold;
+    color: #3366ff;
+}
+
+.animatedShowOut {
+    animation: showOut 1s linear forwards;
+}
+
+@keyframes showOut {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 100%;
+    }
+}
+
+.Loading {
+    width: 60px;
+    height: 20px;
+}
+
+.dot1, .dot2, .dot3 {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: #e83e8c;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+
+.dot1 {
+    margin: 0;
+    animation: dot1 1s linear infinite;
+}
+
+.dot2 {
+    animation: dot2 1s linear infinite;
+}
+
+.dot3 {
+    animation: dot3 1s linear infinite;
+}
+
+@keyframes dot1 {
+    0% {
+        transform: none;
+    }
+    16.66% {
+        transform: scale(1.4);
+    }
+    33.33% {
+        transform: none;
+    }
+}
+
+@keyframes dot2 {
+    0% {
+        transform: none;
+    }
+    33.33% {
+        transform: none;
+    }
+    49.99% {
+        transform: scale(1.4);
+    }
+    66.65% {
+        transform: none;
+    }
+}
+
+@keyframes dot3 {
+    0% {
+        transform: none;
+    }
+    66.65% {
+        transform: none;
+    }
+    83.31% {
+        transform: scale(1.4);
+    }
+    100% {
+        transform: none;
+    }
+}
